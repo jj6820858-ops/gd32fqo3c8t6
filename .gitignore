@@ -1,0 +1,24 @@
+# Keil build output and local editor state
+**/Objects/
+**/Objects_HMI/
+**/Listings/
+**/Listings_HMI/
+*.uvguix.*
+*.uvgui.*
+*.o
+*.obj
+*.axf
+*.crf
+*.d
+*.dep
+*.bak
+*.tmp
+
+# Generated checks and temporary renders
+**/tmp/
+**/tests/*.exe
+**/__pycache__/
+*.pyc
+
+# Keep latest submission materials and reproducible source, not older bundles
+**/output/pdf/*V1.0*

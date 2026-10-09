@@ -1,37 +1,35 @@
-# gd32fqo3c8t6
+# GD32 直接测周法频率计
 
-#### 介绍
-GD32课程设计：直接测周法频率计与按键、OLED人机接口
+基于 GD32F103C8T6 的课程设计工程，包含原始示例工程，以及按键和 SSD1306 OLED 人机接口工程。
 
-#### 软件架构
-软件架构说明
+## 工程入口
 
+| 文件夹 | Keil 工程 | 说明 |
+| --- | --- | --- |
+| [原始工程](原始工程/) | [2.uvprojx](原始工程/2.uvprojx) | 原来的 GPIO、LED、串口和按键示例 |
+| [人机接口工程](人机接口工程/) | [HMI.uvprojx](人机接口工程/HMI.uvprojx) | 三个独立按键扫描、20ms消抖、OLED显示与交互演示 |
 
-#### 安装教程
+详细目录和维护规则见 [工程管理说明](工程管理说明.md)。两个工程各自包含 CMSIS 和 GD32 标准外设库，可分别打开编译。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 人机接口
 
-#### 使用说明
+- SW1、SW2、SW3：PA5、PA6、PA7，低电平按下；SW4为硬件复位。
+- OLED：SSD1306，128×64，7位地址0x3C；PB10/PB11使用硬件I2C1，100kHz。
+- 显示接口提供初始化、清屏、字符、字符串、整数和浮点数显示。显示缓冲修改后调用 `OLED_Refresh()` 更新屏幕。
+- 演示通过1ms SysTick扫描按键，OLED传输保留超时、NACK和错误处理。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 编译与验证
 
-#### 参与贡献
+使用 Keil 打开对应 `.uvprojx`。当前人机接口工程采用 ARM Compiler 5.05 update 1，已编译链接通过，0错误、0警告；日志见 [HMI_build.log](人机接口工程/HMI_build.log)。
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+[tests](人机接口工程/tests/) 包含按键、显示和硬件I2C适配层的主机模拟测试。
 
+尚未上板验证。人机接口页面中的频率值是演示数据，不是实际测量结果；立创EDA原理图整改及DRC仍待完成。
 
-#### 特技
+## 文档与提交材料
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- [本阶段分工与交付说明](人机接口工程/document/基础模块02_人机接口_任务分工与交付说明.md)
+- [V1.1 PDF、分文件PDF和源码材料](人机接口工程/output/pdf/)
+- [原始设计资料](原始工程/document/)
+
+仓库保留源码、工程配置、设计资料和提交材料。编译产物、临时渲染图片和个人Keil界面状态通过 `.gitignore` 排除。

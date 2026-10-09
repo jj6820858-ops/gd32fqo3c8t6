@@ -1,0 +1,56 @@
+[
+  {
+    "file": "01_阶段任务分工说明.pdf",
+    "first_page": 1,
+    "pages": 3,
+    "sha256": "890f77fec8db0295e61334a348d8b3da0b3d04eaf94bdb3d55e9c34af51a859d"
+  },
+  {
+    "file": "02_key.h.pdf",
+    "first_page": 4,
+    "pages": 1,
+    "sha256": "ef1330fb1813e535a9a205871992b101bd59e1af55d917bc9e24c9d4e0d4c28b"
+  },
+  {
+    "file": "03_key.c.pdf",
+    "first_page": 5,
+    "pages": 2,
+    "sha256": "ce9e11cdd328d6db32c1c64e5662432cdc56e2f89fc005d50dcecfcb8013f198"
+  },
+  {
+    "file": "04_oled.h.pdf",
+    "first_page": 7,
+    "pages": 2,
+    "sha256": "60849cae32d2424bca76fe019755d7cd9219886bdd0d02a1a2bc966ecc6e7350"
+  },
+  {
+    "file": "05_oled.c.pdf",
+    "first_page": 9,
+    "pages": 5,
+    "sha256": "a2bafa850cc2024ec5411f38b99bb18ff27dfeb17a9c6128398d25545c67521c"
+  },
+  {
+    "file": "06_hmi_port.h.pdf",
+    "first_page": 14,
+    "pages": 1,
+    "sha256": "2217b697fd8d6fdfe6f63a0c6b30532fd0d21eef65ef53b3feb8af3bd7fc2109"
+  },
+  {
+    "file": "07_hmi_port.c.pdf",
+    "first_page": 15,
+    "pages": 4,
+    "sha256": "aa8ac5b1ed901ffaeda8a655d23d6f5d48362be86580493905be1a8fccf9757c"
+  },
+  {
+    "file": "08_hmi_demo.c.pdf",
+    "first_page": 19,
+    "pages": 2,
+    "sha256": "88712685ebbd512a4ea1346a870d43c90df3374ef1e96dbc1537d6a5538e1a59"
+  },
+  {
+    "file": "09_立创EDA原始导出原理图.pdf",
+    "first_page": 21,
+    "pages": 3,
+    "sha256": "966cb07176dcc15546cc9344ba36f8c993be866d68c5fbb39721fd2d1f6dd3ec"
+  }
+]
